@@ -1,8 +1,7 @@
 import { Platform } from 'react-native';
 
 export const API_BASE =
-  process.env.EXPO_PUBLIC_API_URL ||
-  (Platform.OS === 'android' ? 'http://10.0.2.2:5000' : 'http://localhost:5000');
+  process.env.EXPO_PUBLIC_API_URL || 'https://queuemate-y6kg.onrender.com';
 
 export async function apiFetch(path, { method = 'GET', body, token } = {}) {
   const controller = new AbortController();
